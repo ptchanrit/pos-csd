@@ -63,7 +63,7 @@ const POSApp: React.FC = () => {
       <div className="font-noto grid grid-cols-1 md:grid-cols-3 gap-4 py-8 px-4 ">
         <div className="col-span-2">
           <div className="bg-white rounded shadow-lg  p-4  h-full">
-            <h2 className="text-2xl mb-4">รายการสินค้า</h2>
+            <h2 className="text-2xl mb-4 text-gray-900">รายการสินค้า</h2>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   gap-4">
               {products.map((product) => (
                 <div
@@ -73,7 +73,7 @@ const POSApp: React.FC = () => {
                 >
                   <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-t" />
                   <div className="p-4">
-                    <p className="text-lg font-semibold mb-2">{product.name}</p>
+                    <p className="text-lg font-semibold mb-2 text-gray-900">{product.name}</p>
                     <p className="text-gray-600">{product.price} บาท</p>
                   </div>
                 </div>
@@ -83,16 +83,16 @@ const POSApp: React.FC = () => {
         </div>
         <div>
           <div className="bg-white rounded shadow-lg p-4 h-full">
-            <h2 className="text-2xl mb-4">ตะกร้าสินค้า</h2>
+            <h2 className="text-2xl mb-4 text-gray-900">ตะกร้าสินค้า</h2>
             {cartItems.length > 0 ? (
               <ul className="divide-y divide-gray-200">
                 {cartItems.map((item) => (
                   <li key={item.id} className="flex items-center py-4">
                     <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded" />
                     <div className="flex-grow ml-4">
-                      <p className="text-lg font-semibold">{item.name}</p>
+                      <p className="text-lg font-semibold text-gray-900">{item.name}</p>
                       <p className="text-gray-600">
-                        {item.price} - จำนวน: {item.quantity}บาท
+                        {item.price} บาท - จำนวน: {item.quantity}
                       </p>
                     </div>
                     <button
@@ -109,7 +109,7 @@ const POSApp: React.FC = () => {
             )}
             <div className="mt-8">
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl">ราคารวมทั้งหมด: {getTotalAmount()} บาท</h3>
+                <h3 className="text-2xl text-gray-900">ราคารวมทั้งหมด: {getTotalAmount()} บาท</h3>
               </div>
               <button
                 className="w-full mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600"
