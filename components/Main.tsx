@@ -52,6 +52,7 @@ const POSApp: React.FC = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    setCartItems([])
   };
 
   return (
